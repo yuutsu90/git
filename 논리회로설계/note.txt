@@ -1,0 +1,28 @@
+vhdr
+verylog
+
+digital vs analog
+
+Digital Signal
+-Discrete
+-Signal that can have one of a finite set of possible value
+
+Analog signal
+-Continous
+-Signal that can have one of an inifinite number of possible values
+
+저장과 전송
+
+
+
+digital : 쪼개고 대표값을 구한다
+
+sampling rate
+bit rate
+
+이산수학
+
+TV : 24hz
+HD : 60hz
+
+남을 가르킬 정도로 공부하자

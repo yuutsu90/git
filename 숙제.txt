@@ -1,0 +1,38 @@
+***교재 확인
+수치해석
+-Applied Numerical Methods with MATLAB for Engineers and Scientists
+-Numerical Methods in Engineering with Python 3
+-SciPY and NumPy
+
+일본어 I
+-New 다이나믹 일본어
+
+C++
+-Power C++ 천인국
+
+웹클라이언트컴퓨팅
+-자바스크립트 프로그래밍 입문", 한빛아카데미, 윤인성
+
+우분투 설치
+
+객체지향프로그래밍
+-------------------------------------
+3월11일 휴강
+
+
+웹클라이언트컴퓨팅
+-------------------------------------
+3월11일 과제
+https://www.youtube.com/watch?v=_bh8ztMJIPE&list=PLuHgQVnccGMA9QQX5wqj6ThK7t2tsGxjm&index=15
+
+
+일본어I
+--------------------------------------
+3월 12일 시험
+
+
+
+논리회로설계
+--------------------------------------
+Digital vs Analogue 차이
+Digital Logic Design이 무엇인가
