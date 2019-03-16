@@ -26,3 +26,45 @@ TV : 24hz
 HD : 60hz
 
 남을 가르킬 정도로 공부하자
+
+Abstraction
+복잡한거 쉽게 만들고 이식 가능하게 만들어라
+transparency 투명성을 제공한다 
+몰라도 되게 만들었다
+
+Boolean Algebra 사람의생각을 수학적으로 나타내는법
+
+수율 = 성공율
+
+Microprocessor = programming start
+
+데이터 한번저장 중복된걸 찾는다
+
+Run length encoding
+
+trade-off = A trade-off B
+if A goes better, B gets worse
+
+finding "optimization" is important
+
+슬라이드만 시험에 나오지 않는다
+
+명확한 목적이 있으면 optimization is successful
+목적에 따라 결정한다
+
+FPGA
+Micro Processing 시댄
+
+VHDA vs Verilog
+
+구글 started cpu on deep learning
+Hardware vs Computer (chip)
+
+16 bit and 64bit sampling rate 한번에 처리할수 있는 양
+
+logic gate + logic gate  = logic circuit digital, logic design
+continous math >> discrete math
+flash memory(안좋은 하드웨어에 똑똑한 소프트웨어를 만든다)> SK , Samsung 
+bread board
+
+32bit = 4 giga 2^2 * 2^20
