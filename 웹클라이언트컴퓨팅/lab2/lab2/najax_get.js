@@ -5,16 +5,16 @@ let najax = $ = require('najax');
 let fs=require('fs');
 
 
-function getData(callback) {
+let data = (callback) => {
 	let tableData;
 	$.get('https://www.google.com', callback);
 	return tableData;
 }
 
-getData(function (response) {
+data(resp = (response) => {
 		   tableData = response;
                    //console.log(tableData);
-                   fs.writeFile(__dirname+"/temp/google_page.html", tableData, function(err) {
+                   fs.writeFile(__dirname+"/temp/google_page.html", tableData, errors = (err) => {
                        if(err) {
                            return console.log(err);
                        }

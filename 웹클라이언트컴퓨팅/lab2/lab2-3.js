@@ -1,6 +1,4 @@
-// npm install request
-
-
+//request.js
 let request=require('request');
 let fs=require('fs');
 
@@ -22,3 +20,27 @@ let timeout = setTimeout(function(){
     homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe_delay5000.html"));
     console.log('The file(naver_page_pipe_delay5000.html) was saved after '+timeout+'msec');
     }, 5000);
+
+
+
+//najax_get.js
+let najax = $ = require('najax');
+let fs=require('fs');
+
+
+let data = (callback) => {
+	let tableData;
+	$.get('https://www.google.com', callback);
+	return tableData;
+}
+
+data(resp = (response) => {
+		   tableData = response;
+                   //console.log(tableData);
+                   fs.writeFile(__dirname+"/temp/google_page.html", tableData, errors = (err) => {
+                       if(err) {
+                           return console.log(err);
+                       }
+                       console.log("The file(google_page.html) was saved!");
+         });
+});
