@@ -1,4 +1,4 @@
-﻿
+
 function callWebService(callback) {
     let second = 0;
 
