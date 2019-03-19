@@ -1,11 +1,31 @@
-//request.js
+// npm install request
+
+
 let request=require('request');
 let fs=require('fs');
 
 console.log(__dirname);
 
-let homepage=request('http://www.naver.com', home=function(err, res, body){     //home = function 익명함수 대체
-    fs.writeFile(__dirname+"/temp/naver_page.html", body, error=function(err) {    //error = function 익명함수 대체
+let time = function(){
+    var timeout=5000;
+    homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe_delay5000.html"));
+    console.log('The file(naver_page_pipe_delay5000.html) was saved after '+timeout+'msec');
+    };
+
+let errors = function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The file(naver_page.html) was saved!");
+}
+
+let main = function(err, res, body){
+    fs.writeFile(__dirname+"/temp/naver_page.html", body, err = errors(err));
+}
+
+
+let homepage=request('http://www.naver.com', function(err, res, body){
+    fs.writeFile(__dirname+"/temp/naver_page.html", body, function(err) {
         if(err) {
             return console.log(err);
         }
@@ -15,29 +35,36 @@ let homepage=request('http://www.naver.com', home=function(err, res, body){     
 
 homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe.html"));
 
-let timeout = setTimeout(function(){   //timeout = setTimeout(function) 익명함수 대체
+setTimeout(function(){
     var timeout=5000;
     homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe_delay5000.html"));
     console.log('The file(naver_page_pipe_delay5000.html) was saved after '+timeout+'msec');
     }, 5000);
 
+// npm install najax
 
 
-//najax_get.js
 let najax = $ = require('najax');
 let fs=require('fs');
 
 
-let data = (callback) => {   //let data = (callback) => 화살표함수
+let getData = (callback) => {
 	let tableData;
 	$.get('https://www.google.com', callback);
 	return tableData;
 }
 
-data(resp = (response) => {    //resp = (response) => 화살표함수
+let error = (err) => {
+		if(err) {
+				return console.log(err);
+		}
+		console.log("The file(google_page.html) was saved!");
+}
+
+getData(function (response) {
 		   tableData = response;
                    //console.log(tableData);
-                   fs.writeFile(__dirname+"/temp/google_page.html", tableData, errors = (err) => {
+                   fs.writeFile(__dirname+"/temp/google_page.html", tableData, function(err) {
                        if(err) {
                            return console.log(err);
                        }
