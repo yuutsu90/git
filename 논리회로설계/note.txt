@@ -68,3 +68,22 @@ flash memory(안좋은 하드웨어에 똑똑한 소프트웨어를 만든다)> SK , Samsung
 bread board
 
 32bit = 4 giga 2^2 * 2^20
+
+
+#19.03.19
+1 + 1 = 10 (carry)
+1 + 0 = 1 (overflow) = limit
+Developer needs to know whether overflow will happen or not.
+
+10 - 13 
+Steps
+1. 부호가 같은지 본다
+-같으면 더하고 똑같은 부호
+-틀리면 큰 수를 찾고 뺀다음 큰 부호를 쓴다
+Sign and Magnitude
+
+컴퓨터는 1의보수 2의보수로 계산한다 (Carry 가 발생하면 1을 더한다)
+Subtraction = 2의보수를 구해서 더한다
+
+Logic = 식 (Boolean) 쉐논
+사람의 생각 => 식 => 사람처럼 생각하는 컴퓨터 
