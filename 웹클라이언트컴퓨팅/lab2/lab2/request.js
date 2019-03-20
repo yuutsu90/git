@@ -4,24 +4,38 @@
 let request=require('request');
 let fs=require('fs');
 
+console.log(__dirname);
+
+let time = function(){
+    var timeout=5000;
+    homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe_delay5000.html"));
+    console.log('The file(naver_page_pipe_delay5000.html) was saved after '+timeout+'msec');
+    };
+
 let errors = function(err) {
     if(err) {
         return console.log(err);
     }
+    console.log("The file(naver_page.html) was saved!");
+}
 
-console.log(__dirname);
-let home=function(err, res, body){
-    fs.writeFile(__dirname+"/temp/naver_page.html", body, error=
+let main = function(err, res, body){
+    fs.writeFile(__dirname+"/temp/naver_page.html", body, err = errors(err));
+}
+
+
+let homepage=request('http://www.naver.com', function(err, res, body){
+    fs.writeFile(__dirname+"/temp/naver_page.html", body, function(err) {
+        if(err) {
+            return console.log(err);
+        }
         console.log("The file(naver_page.html) was saved!");
     });
 });
 
-
-let homepage=request('http://www.naver.com',
-
 homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe.html"));
 
-let timeout = setTimeout(function(){
+setTimeout(function(){
     var timeout=5000;
     homepage.pipe(fs.createWriteStream(__dirname+"/temp/naver_page_pipe_delay5000.html"));
     console.log('The file(naver_page_pipe_delay5000.html) was saved after '+timeout+'msec');
